@@ -1,5 +1,10 @@
 # Veracity
 
+This was a group project for the 24 hour HackUC II hackathon hosted at Union County Vocational Technical Schools in New Jersey on June 22-23. My group consisted of Eric, Nick, Matt, and myself. 
+
+Our original Devpost project can be viewed here: [https://devpost.com/software/veracity-ai3lq1](https://devpost.com/software/veracity-ai3lq1)
+Another Github repo for this project is Eric's: [https://github.com/schneidere/Veracity](https://github.com/schneidere/Veracity)
+
 ## Inspiration
 We live in an information age like none other. Approximately 74.6% of the United States population has access to the Internet (according to a 2015 study), a resource upon which digital journalism has evolved and flourished. Thanks to this ever-strengthening trend, more and more Americans are increasingly relying upon free news articles written online as their primary or sole source of news.
 
@@ -35,10 +40,10 @@ We learned the incredible potential for browser extensions and their potential u
 ## What's next for Veracity
 Our final product was delivered under the constraints of a 24-hour timeframe, but in the future we plan on implementing the following improvements/features:
 
-..* A system that assigns ratings to unregistered sites based on scanning the articles there; this will let us add new sites to our database
+* A system that assigns ratings to unregistered sites based on scanning the articles there; this will let us add new sites to our database
 
-..* Weighted articles: Articles that are deemed more relevant will be given a higher weighted score, this will allow us to measure the change in political climate over time based on online news
+* Weighted articles: Articles that are deemed more relevant will be given a higher weighted score, this will allow us to measure the change in political climate over time based on online news
 
-..* Make the plugin available to be installed on not just Chrome but on all mainstream browsers (Firefox, Opera, Microsoft Edge, etc.)
+* Make the plugin available to be installed on not just Chrome but on all mainstream browsers (Firefox, Opera, Microsoft Edge, etc.)
 
 Additionally, given more time, we hope to make the entire system more efficient so that it could service as many users as required. We believe that Veracity has incredible potential to become a useful tool both for political junkies as well as the casual observer.
