@@ -3,6 +3,7 @@
 This was a group project for the 24 hour HackUC II hackathon hosted at Union County Vocational Technical Schools in New Jersey on June 22-23. My group consisted of Eric, Nick, Matt, and myself. 
 
 Our original Devpost project can be viewed here: [https://devpost.com/software/veracity-ai3lq1](https://devpost.com/software/veracity-ai3lq1)
+
 Another Github repo for this project is Eric's: [https://github.com/schneidere/Veracity](https://github.com/schneidere/Veracity)
 
 ## Inspiration
