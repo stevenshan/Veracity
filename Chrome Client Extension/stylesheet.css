@@ -1,0 +1,76 @@
+body {
+	background: url("imgs/white_linen.png");
+	margin: 0px;
+	font-family: "BebasNeue", serif;
+	color: #6D435A;
+}
+
+#container {
+	width: 250px;
+	min-height: 350px;
+}
+
+#content {
+	width: 100%;
+	height: 290px;
+	/*position: relative;*/
+}
+
+#container #header {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	background: url("imgs/light_linen.png");
+}
+
+#container #header:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 10px;
+	margin: auto;
+	width: 108px;
+	height: 36px;
+	background-image: url("icon/logo.png");
+	background-repeat: no-repeat;
+	background-size: 108px 36px;
+	background-position: center;
+}
+
+#loading {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 0px;
+	bottom: 0px;
+	height: 80px;
+	margin: auto;
+	font-size: 20px;
+	display: none;
+}
+
+#error {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	font-size: 20px;
+	display: none;
+}
+
+#error span {
+	display: table-cell;
+  vertical-align: middle;
+}
+
+.box {
+	width: 100%;
+	height: 120px;
+	background: blue;
+	text-align: center;
+}

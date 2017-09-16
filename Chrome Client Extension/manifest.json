@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "Facts Facts Facts",
+	"author": "Steven Shan, Eric Schneider, Nick Mohan, Matt Wang",
+	"description": "Used for wi",
+	"version": "0.1",
+	"icons": { "16": "icon/icon16.png",
+           	   "48": "icon/icon48.png",
+          	   "128": "icon/icon128.png"
+    },
+	"permissions": [
+		"storage",
+		"http://*/"
+	],
+	"browser_action": {
+		"default_icon": {
+        	"16": "icon/icon16.png",
+            "24": "icon/icon24.png",
+            "32": "icon/icon32.png"
+    	},
+        "default_title": "Facts Facts Facts",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+		{
+			"matches": [
+		  		"<all_urls>"
+			],
+			"js": [
+				"jquery-3.2.1.min.js",
+				"content.js",
+				"update_news_sources.js"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		"news_sources.json"
+	],
+	"optional_permissions": ["webRequest"]
+}
