@@ -3,9 +3,12 @@
 This was a group project for the 24 hour HackUC II hackathon hosted at Union County Vocational Technical Schools in New Jersey on June 22-23. My group consisted of Eric, Nick, Matt, and myself. 
 
 Our original Devpost project can be viewed here: [https://devpost.com/software/veracity-ai3lq1](https://devpost.com/software/veracity-ai3lq1)
+
 Another Github repo for this project is Eric's: [https://github.com/schneidere/Veracity](https://github.com/schneidere/Veracity)
 
 ## Inspiration
+<img align="left" src="https://github.com/shansteven/Veracity/blob/master/screenshot.jpg">
+
 We live in an information age like none other. Approximately 74.6% of the United States population has access to the Internet (according to a 2015 study), a resource upon which digital journalism has evolved and flourished. Thanks to this ever-strengthening trend, more and more Americans are increasingly relying upon free news articles written online as their primary or sole source of news.
 
 The problem with this new influx of internet news media is that information is much more easily manipulated to represent biased data. In fact, it has been shown in a recent study conducted by Stanford University that consumers of online media are incredibly inept at differentiating credible news from sponsored media, satire, and falsified articles containing reports of bogus events.
