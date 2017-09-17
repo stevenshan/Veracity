@@ -5,7 +5,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var utf8 = require('utf8');
 var patchV = "x.x";
-var urlPrefix = "http://forums.vainglorygame.com/";
+var urlPrefix = "http://www.allsides.com";
 var i = 0;
     url = ['https://www.allsides.com/bias/bias-ratings','https://www.allsides.com/bias/bias-ratings?field_news_source_type_tid=2&field_news_bias_nid=1&field_featured_bias_rating_value=All&title=&page=1','https://www.allsides.com/bias/bias-ratings?field_news_source_type_tid=2&field_news_bias_nid=1&field_featured_bias_rating_value=All&title=&page=2']; //TODO: work with multiple URLs
 var runtime = 0;
