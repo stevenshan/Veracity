@@ -1,6 +1,0 @@
-0 - no error
-1 - not loaded
-3 - no content found
-4 - multiple authors found
-5 - no authors found
-6 - not a news article
