@@ -28,7 +28,7 @@ else:
     article.parse()
     data = {}
     data["author"] = article.authors
-    data["text"] = article.text.encode('ascii','ignore')
+    data["text"] = article.text.encode('ascii', 'ignore')
 
     # Author data, article data, website data
     availables = [True, True, True]
@@ -42,11 +42,16 @@ else:
         data["author"] = data["author"][0]
 
     if availables[0] is True:
-        data["author_data"] = requests.post('http://138.197.83.96:8080/author', data["author"][0]).text
+        data["author_data"] = requests.post(
+            'http://138.197.83.96:8080/author',
+            data["author"][0]).text
     if availables[1] is True:
-        data["article_data"] = requests.post('http://138.197.83.96:8080/article', {"author": data["author"], "urlx": url, "text": data["text"]}).text
+        data["article_data"] = requests.post(
+            'http://138.197.83.96:8080/article', {
+                "author": data["author"], "urlx": url, "text": data["text"]}).text
     if availables[2] is True:
-        data["site_data"] = requests.post('http://138.197.83.96:8080/site', short_url).text
+        data["site_data"] = requests.post(
+            'http://138.197.83.96:8080/site', short_url).text
 
     print_data = str(data).replace("\"", "\\\"").replace("'", "\"")
     print_data = re.sub("[\"][ a-zA-Z]*:[ a-zA-Z]*[\"]", "\" : \"", print_data)
