@@ -31,25 +31,25 @@ else:
     data["text"] = article.text.encode('ascii', 'ignore')
 
     # Author data, article data, website data
-    availables = [True, True, True]
+    availables = [True]*3
     if len(data["text"]) < 20:
         availables[1] = False
     if len(data["author"]) > 1:
         availables[0] = False
-    elif len(data["author"]) == 0:
+    elif not len(data["author"]):
         availables[0] = False
     else:
         data["author"] = data["author"][0]
 
-    if availables[0] is True:
+    if availables[0]:
         data["author_data"] = requests.post(
             'http://138.197.83.96:8080/author',
             data["author"][0]).text
-    if availables[1] is True:
+    if availables[1]:
         data["article_data"] = requests.post(
             'http://138.197.83.96:8080/article', {
                 "author": data["author"], "urlx": url, "text": data["text"]}).text
-    if availables[2] is True:
+    if availables[2]:
         data["site_data"] = requests.post(
             'http://138.197.83.96:8080/site', short_url).text
 
