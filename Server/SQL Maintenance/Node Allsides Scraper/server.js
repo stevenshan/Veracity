@@ -40,36 +40,6 @@ function execute() {
 
 					var temp_url = $(this).children("a").attr("href");
 					getDescription(temp_url, connection);
-					//var dataUser = $(this).children(".listBlock,.main").children(".meta").children(".username");
-					//var dataDate = $(this).children(".listBlock,.main").children(".meta").children(".DateTime");
-					//var dataShortDesc = $(this).children(".listBlock,.main").children(".snippet").children("a");
-					//var dataDLink = $(this).children(".listBlock,.main").children(".snippet").children("a").attr("href");
-					//postID = $(this).attr("id");
-
-
-					/*title = dataTitle.text();
-					user = dataUser.text();
-					if (dataDate.attr("title")){
-						date = dataDate.attr("title");
-					}
-					else{
-						date = dataDate.text();
-					}
-					shortDesc = dataShortDesc.text();
-					
-					dLink = dataDLink;
-					if (title && user && date && dLink){
-						uploadArray.push(new Array());
-						uploadArray[i].push(title);
-						uploadArray[i].push(user);
-						uploadArray[i].push(date);
-						uploadArray[i].push(shortDesc);
-						uploadArray[i].push((urlPrefix + dLink));
-						uploadArray[i].push(postID);
-						description = getDescription((urlPrefix + dLink), postID, i, connection);
-						i++;
-						*/
-					//}
 				})
 			}
 		})
@@ -119,9 +89,6 @@ function getDescription(nUrl, connection){
 
 function fupload(data, connection){
 	
-	 
-	 
-	
 	connection.query('SELECT * FROM `sites` WHERE `url` = ?', [data[0]], function (error, results, fields) {
 		
 		if (results == 0){
@@ -132,34 +99,14 @@ function fupload(data, connection){
 				}
 				else{
 					console.log("New Entry Good: ");
-					/*console.log("Title: " + data[0]);
-					console.log("User: " + data[1]);
-					console.log("Date: " + data[2]);
-					console.log("Short Description: " + data[3]);
-					console.log("URL: " + data[4]);
-					console.log("Post ID: " + data[5]);
-					console.log("Description: " + data[6]);
-					console.log("");
-					*/
-				}
 			});
 		}
 		else{
 			console.log("Duplicate Entry --PostID:" + data[5]);
-			/*if (results[0].title != data [6]){
-				connection.query('UPDATE devposts SET description = :desc WHERE postID = :pid', {description:data[6],pid:data[5]}, function (error, results, fields) {
-				if (error){
-					console.log(error);	
-				}
-			});
-			}
-			*/
-			//another time, old friend
 		}
 
 		
 	});
-	//connection.end();
 }
 
 console.log('VGD v1.0.0 Booted!');
