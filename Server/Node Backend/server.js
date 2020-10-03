@@ -11,8 +11,8 @@ var server = http.createServer ( function(request,temp_response){
     if (request.method == "GET" && request.url == "/article")
         {
 			var body;
-			var articleTxt = "I love Bernie Sanders";
-			var author = "Kijo Kimu";
+			var articleTxt = "article_test_text";
+			var author = "article_test_author";
 			var articleUrl = "testurl1";
 			body = parseArticle(articleTxt, author, articleUrl, function(leaning){
 				console.log(leaning);
