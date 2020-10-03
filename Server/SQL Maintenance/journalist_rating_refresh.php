@@ -1,8 +1,8 @@
 <?php
 	$servername = "localhost";
 	$username = "user";
-	$password = "password";
-	$dbname = "tst2";
+	$password = "****";
+	$dbname = "tst";
 	$rayorder = [];
 	$superay = [[]];
 
