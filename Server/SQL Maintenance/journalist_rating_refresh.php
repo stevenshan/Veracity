@@ -22,17 +22,21 @@
 		while($row = mysqli_fetch_assoc($result)) {
 			if ($rayorder.indexOf($row["name"]) == -1){
 				$rayorder[rayorder.length] = $row["name"];
-				$superay[rayorder.length][0] = $row["G"];
-				$superay[rayorder.length][1] = $row["Con"];
-				$superay[rayorder.length][2] = $row["Lib"];
-				$superay[rayorder.length][3] = $row["Libt"];
+				$vars = array("G", "Con", "Lib", "Libt");
+				for($x = 0; $x<4; $x++){
+					$superay[rayorder.length][$x] = $row[$vars[$x]];
+				}
 				$superay[rayorder.length][4] = 1;
 			}
 			else{
-				$superay[$rayorder.indexOf($row["name"]) - 1][0] = (($superay[$rayorder.indexOf($row["name"]) - 1][0] * $superay[$rayorder.indexOf($row["name"]) - 1][4] + $row["G"])/ ($superay[$rayorder.indexOf($row["name"]) - 1][4] + 1));
-				$superay[$rayorder.indexOf($row["name"]) - 1][1] = (($superay[$rayorder.indexOf($row["name"]) - 1][1] * $superay[$rayorder.indexOf($row["name"]) - 1][4] + $row["Con"])/ ($superay[$rayorder.indexOf($row["name"]) - 1][4] + 1));
-				$superay[$rayorder.indexOf($row["name"]) - 1][2] = (($superay[$rayorder.indexOf($row["name"]) - 1][2] * $superay[$rayorder.indexOf($row["name"]) - 1][4] + $row["Lib"])/ ($superay[$rayorder.indexOf($row["name"]) - 1][4] + 1));
-				$superay[$rayorder.indexOf($row["name"]) - 1][3] = (($superay[$rayorder.indexOf($row["name"]) - 1][3] * $superay[$rayorder.indexOf($row["name"]) - 1][4] + $row["G"])/ ($superay[$rayorder.indexOf($row["name"]) - 1][4] + 1));
+				$vars = array("G", "Con", "Lib", "G");
+
+				for($x = 0; $x<4; $x++){
+					$superay[$rayorder.indexOf($row["name"]) - 1][$x] = 
+						(($superay[$rayorder.indexOf($row["name"]) - 1][$x] 
+						* $superay[$rayorder.indexOf($row["name"]) - 1][4] + $row[$vars[$x]])
+						/ ($superay[$rayorder.indexOf($row["name"]) - 1][4] + 1));
+				}
 				$superay[$rayorder.indexOf($row["name"]) - 1][4] = $superay[$rayorder.indexOf($row["name"]) - 1][4] + 1;
 			}
 		}
